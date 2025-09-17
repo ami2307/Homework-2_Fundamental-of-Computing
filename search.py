@@ -1,19 +1,22 @@
 def dfs(graph):
     visited = set()
     nodes = sorted(graph.keys())
-    stack = []
-
-    for node in nodes:
-        if node not in visited:
-            stack.append(node)
+    
+    for start_node in nodes:
+        if start_node not in visited:
+            stack = [start_node]
+            
             while stack:
-                n = stack.pop()
-                if n in visited:
+                node = stack.pop()
+                
+                if node in visited:
                     continue
-                print(n)
-                visited.add(n)
-                if n in graph:
-                    for nbr in reversed(graph[n]):
+                
+                print(node)
+                visited.add(node)
+                
+                if node in graph:
+                    for nbr in reversed(graph[node]):
                         if nbr not in visited:
                             stack.append(nbr)
 
