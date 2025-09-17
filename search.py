@@ -13,6 +13,7 @@ def dfs(graph):
                 print(n)
                 visited.add(n)
                 if n in graph:
+                    # Add neighbors in reverse to preserve order when popping from stack
                     for nbr in reversed(graph[n]):
                         if nbr not in visited:
                             stack.append(nbr)
@@ -35,9 +36,3 @@ def bfs(graph):
                     for nbr in graph[n]:
                         if nbr not in visited:
                             queue.append(nbr)
-
-g = {1: [2, 3], 2: [], 3: [2, 4], 4: [3]}
-print("DFS order:")
-dfs(g)
-print("BFS order:")
-bfs(g)
