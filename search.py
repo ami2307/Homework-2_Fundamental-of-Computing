@@ -1,11 +1,11 @@
 def dfs(graph):
     visited = set()
     nodes = sorted(graph.keys())
-    
+
     for start_node in nodes:
         if start_node not in visited:
             stack = [start_node]
-            
+
             while stack:
                 node = stack.pop()
                 if node in visited:
