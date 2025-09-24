@@ -1,6 +1,6 @@
 # Homework-2_Fundamental-of-Computing
 
-Ami Raj ami.raj2307@gmail.com
+Ami Raj araj2@stevens.edu
 
 1) No
 
