@@ -13,9 +13,9 @@ def dfs(graph):
                 print(node)
                 visited.add(node)
                 if node in graph:
-                    for nbr in reversed(graph[node]):
-                        if nbr not in visited:
-                            stack.append(nbr)
+                   for nbr in sorted(graph[node], reverse=True):
+                    if nbr not in visited:
+                        stack.append(nbr)
 
 
 def bfs(graph):
